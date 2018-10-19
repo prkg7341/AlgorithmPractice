@@ -18,53 +18,40 @@ public class MeetingRoom {
 		int n = Integer.parseInt(br.readLine());
 		int[][] ar = new int[n][2];
 		int count = 0;
-		int max = 0;
 
 		for(int i=0 ; i<n ; i++){
-			String st = br.readLine();
-			int a = Integer.parseInt(st.split(" ")[0]);
-			int b = Integer.parseInt(st.split(" ")[1]);
-			ar[i][0] = a;
-			ar[i][1] = b-a;
-			if(max<(ar[i][0]+ar[i][1])){
-				max = ar[i][0]+ar[i][1];
-			}
+			String input = br.readLine();
+			int start = Integer.parseInt(input.split(" ")[0]);
+			int end = Integer.parseInt(input.split(" ")[1]);
+			ar[i][0] = start;
+			ar[i][1] = end;
 		}
-		
+
 		Arrays.sort(ar, new Comparator<int[]>() {
-			// Override된 compare 함수를 어떻게 정의하냐에 따라서 다양한 정렬이 가능해집니다
 			@Override
 			public int compare(int[] o1, int[] o2) {
 				return o1[1] - o2[1];
-				// 내림자순 정렬을 하고 싶다면 o2와 o1의 위치를 바꿔줍니다
-				// return o2[1] - o1[1];
 			}
 		});
 
-		int[] time = new int[max+1];
+		int startIndex = 0;
 
-		for(int i=0 ; i<n ; i++){
-			if(ar[i][1]==0) {
-				count++;
+		/*while(true){
+			int min = Integer.MAX_VALUE;
+			int minP;
+			for(int i=startIndex ; i<n ; i++){				
+				if (ar[i][0] > ar[startIndex][1]) continue;				
+				minP = min;
+				min = Math.min(min, ar[i][1]);			
 			}
-			else{	
-				int sum=0;
-				for(int j=ar[i][0] ; j<ar[i][0]+ar[i][1] ; j++){
-					sum += time[j];
-				}
-				if(sum==0){
-					for(int j=ar[i][0] ; j<ar[i][0]+ar[i][1] ; j++){
-						time[j] = 1;
-					}				
-					count++;
-				}
+			if(min != minP){
+				startIndex = i;
 			}
+			if(마지막 회의시간보다 늦게 시작하는 회의가 없으면) break;
 		}
 
 		bw.write(count+"");
 		bw.flush();
-		bw.close();
-
+		bw.close();*/
 	}
-
 }
