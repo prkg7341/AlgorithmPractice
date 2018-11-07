@@ -1,4 +1,4 @@
-package Structure;
+package DataStructure;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -16,7 +16,7 @@ public class Parenthesis {
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringBuilder sb = new StringBuilder();
 
-		int n = Integer.parseInt(br.readLine());
+		int n = Integer.parseInt(br.readLine());	
 
 		for(int i=0 ; i<n ; i++){
 

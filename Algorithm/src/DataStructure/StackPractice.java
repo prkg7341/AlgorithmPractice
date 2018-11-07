@@ -1,11 +1,11 @@
-package Structure;
+package DataStructure;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class QueuePractice {
+public class StackPractice {
 
 	public static void main(String[] args) throws NumberFormatException, IOException{
 		ArrayList<Integer> list = new ArrayList<>();
@@ -19,8 +19,7 @@ public class QueuePractice {
 			case "pop": pop(list); break;
 			case "size": size(list); break;
 			case "empty": empty(list); break;
-			case "front": front(list); break;
-			case "back": back(list); break;
+			case "top": top(list); break;
 
 			}
 		}
@@ -35,8 +34,8 @@ public class QueuePractice {
 			System.out.println(-1);
 		}
 		else{
-			System.out.println(list.get(0));
-			list.remove(0);
+			System.out.println(list.get(list.size()-1));
+			list.remove(list.size()-1);
 		}
 	}
 	static void size(ArrayList<Integer> list){
@@ -50,15 +49,7 @@ public class QueuePractice {
 			System.out.println(0);
 		}
 	}
-	static void front(ArrayList<Integer> list){
-		if(list.isEmpty()){
-			System.out.println(-1);
-		}
-		else{
-			System.out.println(list.get(0));
-		}
-	}
-	static void back(ArrayList<Integer> list){
+	static void top(ArrayList<Integer> list){
 		if(list.isEmpty()){
 			System.out.println(-1);
 		}
