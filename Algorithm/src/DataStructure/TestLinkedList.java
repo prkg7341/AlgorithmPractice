@@ -2,9 +2,9 @@ package DataStructure;
 
 public class TestLinkedList {
 	public static void main(String[] args) {
-		LinkedList<Integer> iL = new LinkedList<Integer>();
-		LinkedList<Double> dL = new LinkedList<Double>();
-		LinkedList<String> sL = new LinkedList<String>();
+		LinkedList_jhk<Integer> iL = new LinkedList_jhk<Integer>();
+		LinkedList_jhk<Double> dL = new LinkedList_jhk<Double>();
+		LinkedList_jhk<String> sL = new LinkedList_jhk<String>();
 		iL.insert(3);iL.insert(5);iL.insert(1);iL.insert(7);
 		dL.insert(3.5);dL.insert(5.2);dL.insert(0.1);dL.insert(7.3);
 		sL.insert("Jahee");sL.insert("Bomjun");sL.insert("Kwon");
