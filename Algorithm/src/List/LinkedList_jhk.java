@@ -1,4 +1,4 @@
-package DataStructure;
+package List;
 
 public class LinkedList_jhk<T extends Comparable> {
 	Node<T> start = null;
