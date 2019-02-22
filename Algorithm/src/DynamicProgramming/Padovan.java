@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
-import java.util.ListIterator;
 
 public class Padovan {
 
@@ -19,7 +18,6 @@ public class Padovan {
 		int n = Integer.parseInt(br.readLine());
 
 		ArrayList<Long> list = new ArrayList<>();
-		ListIterator<Long> it = list.listIterator();
 		list.add((long) 1);
 		list.add((long) 1);
 		list.add((long) 1);
