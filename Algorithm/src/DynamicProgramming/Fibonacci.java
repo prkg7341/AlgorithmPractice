@@ -23,7 +23,7 @@ public class Fibonacci {
 		for(int i=2 ; i<=40 ; i++){
 			ar[i] = ar[i-2] + ar[i-1];
 		}
-		
+
 		for(int i=0 ; i<n ; i++){
 			int t = Integer.parseInt(br.readLine());
 			if(t == 0){
