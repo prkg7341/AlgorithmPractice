@@ -3,7 +3,6 @@ package DynamicProgramming;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 public class Jump {
 
@@ -30,7 +29,6 @@ public class Jump {
 		dfs(0,0);
 
 		System.out.println(dp[0][0]);
-		System.out.println(Arrays.deepToString(dp));
 	}
 
 	private static long dfs(int x, int y){
