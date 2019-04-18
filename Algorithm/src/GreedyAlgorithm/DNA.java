@@ -1,4 +1,4 @@
-package BruteForce;
+package GreedyAlgorithm;
 
 import java.io.BufferedReader;
 import java.io.IOException;
