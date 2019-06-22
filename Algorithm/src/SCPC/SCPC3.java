@@ -1,7 +1,5 @@
 package SCPC;
 
-import java.util.Arrays;
-
 /*
 You should use the standard input/output
 

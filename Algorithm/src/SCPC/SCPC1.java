@@ -13,8 +13,6 @@ Do not use file input and output
 Please be very careful. 
 */
 
-import java.util.Scanner;
-
 /*
    As the name of the class should be Solution , using Solution.java as the filename is recommended.
    In any case, you can execute your program by running 'java Solution' command.
