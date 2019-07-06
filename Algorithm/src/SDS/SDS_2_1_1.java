@@ -3,6 +3,7 @@ package SDS;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.LinkedList;
 
 public class SDS_2_1_1 {
 
@@ -17,14 +18,13 @@ public class SDS_2_1_1 {
 			String[] input = br.readLine().split(" ");
 			int n = Integer.parseInt(input[0]);
 			int k = Integer.parseInt(input[1]);
-			
-			int[] ar = new int[k+1];
+
+			int[] ar = new int[k];
 
 			input = br.readLine().split(" ");
 
 			int color = 1;
 			int max = 0;
-			int count = 0;
 			int zeros = 0;
 
 			for(int i=0 ; i<n ; i++){
@@ -33,20 +33,58 @@ public class SDS_2_1_1 {
 				if(now==0){
 					zeros++;
 				}
-				else if(now==color){
-					count++;
-					count+=zeros;
-					zeros = 0;
-				}
 				else{
+					if(zeros!=0){
+						if(now==color){
+							ar[now-1] += zeros;
+						}
+						else{
+							int first_zeros = zeros;
+							LinkedList<Integer> list = new LinkedList<>();
+							for(int j=now-1 ; j>=color ; j--){
+								list.add(j);
+								if(ar[j]!=0){
+									break;
+								}
+								else{
+									zeros--;
+								}
+							}
+							zeros++;
+							if(zeros>first_zeros) zeros = first_zeros;
+							for(int index : list){
+								ar[index] += zeros;
+							}
+						}
+						zeros = 0;
+					}
 					color = now;
-					max = Math.max(max, count+zeros);
-					count = zeros+1;
+					ar[color-1]++;
 				}
 			}
-			sb.append("#").append(tt).append(" ").append(max).append("\n");
+			if(zeros!=0){
+				int first_zeros = zeros;
+				LinkedList<Integer> list = new LinkedList<>();
+				for(int j=k-1 ; j>=0 ; j--){
+					list.add(j);
+					if(ar[j]!=0){
+						break;
+					}
+					else{
+						zeros--;
+					}
+				}
+				zeros++;
+				if(zeros>first_zeros) zeros = first_zeros;
+				for(int index : list){
+					ar[index] += zeros;
+				}
+			}
+			for(int j=0 ; j<ar.length ; j++){
+				max = Math.max(max, ar[j]);
+			}
+			sb.append("#").append(tt).append(" ").append(max).append(" \n");
 		}
-		sb.deleteCharAt(sb.length()-1);
 		System.out.print(sb.toString());
 	}
 }
