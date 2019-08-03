@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class SegmentTree {
+public class CalculatePrefixSum {
 
 	public static void main(String[] args) throws IOException {
 
