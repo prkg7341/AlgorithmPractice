@@ -1,60 +1,78 @@
 package Kakao2019;
 
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class Solution {
 
 	public static void main(String[] args){
 		Solution s = new Solution();
-		String[] input = {"Enter uid1234 Muzi", "Enter uid4567 Prodo","Leave uid1234","Enter uid1234 Prodo","Change uid4567 Ryan"};
-		for(String st : s.solution(input)){
-			System.out.println(st);
-		}
+		System.out.println(s.solution(new int[] {3, 1, 2}, 5));
 	}
 
-	public String[] solution(String[] record) {
-		HashMap<String, String> users = new HashMap<>();
-		int size = 0;
-		for(String m : record){
-			String[] temp = m.split(" ");
-			String message = temp[0];
-			String uid = temp[1];
-			String name;
-			switch(message){
-			case "Enter":
-				size++;
+	public int solution(int[] food_times, long k) {
 
-			case "Change":
-				name = temp[2];
-				users.put(uid, name);
-				break;
+		int answer = 0;
 
-			case "Leave":
-				size++;
+		ArrayList<Food> foods = new ArrayList<>();
+
+		for(int i=1 ; i<=food_times.length ; i++) {
+			foods.add(new Food(food_times[i-1], i));
+		}
+
+		int index = 0;
+
+		Collections.sort(foods);
+
+		int temp = 0;
+
+		while(k>=food_times.length) {
+			k -= food_times.length;
+			temp++;
+			while(!foods.isEmpty() && foods.get(0).num==temp) {
+				foods.remove(0);
+			}
+			if(foods.isEmpty()) {
+				answer = -1;
 				break;
 			}
 		}
 
-		String[] answer = new String[size];
-		int i = 0;
-		for(String m : record){
-			String[] temp = m.split(" ");
-			String message = temp[0];
-			String uid = temp[1];
-			if(message.contains("Change")){
-				continue;
+		for(int i=0 ; i<k ; i++) {
+			if(foods.isEmpty()) {
+				answer = -1;
+				break;
 			}
-			String ans = users.get(uid) + "님이 ";
-
-			if(message.contains("Enter")){
-				ans += "들어왔습니다.";
+			foods.get(index).num--;
+			if(foods.get(index).num==temp) {
+				foods.remove(index);
 			}
-			else{
-				ans += "나갔습니다.";
+			else {
+				index++;
 			}
-			answer[i] = ans;
-			i++;
+			if(index==foods.size()) {
+				index = 0;
+			}
 		}
+
+		if(index!=-1) {
+			answer = foods.get(index).index;
+		}
+
 		return answer;
+	}
+
+	static class Food implements Comparable<Food>{
+		int num;
+		int index;
+		Food(int num, int index){
+			this.num = num;
+			this.index = index;
+		}
+		@Override
+		public int compareTo(Food o) {
+			// TODO Auto-generated method stub
+			return this.num-o.num;
+		}
 	}
 }
