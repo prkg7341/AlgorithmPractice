@@ -1,11 +1,11 @@
-package Graph;
+package BackTracking;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class NQueen {
+public class BJ_9663_NQueen {
 
 	static long count = 0;
 	static int n;
