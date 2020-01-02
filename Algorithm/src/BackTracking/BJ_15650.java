@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 
-public class BJ_15649 {
+public class BJ_15650 {
 	
 	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
@@ -28,12 +28,12 @@ public class BJ_15649 {
 		
 		StringBuilder sb = new StringBuilder();
 		
-		btrk(list, m, 0, sb);
+		btrk(list, m, 0, 0, sb);
 		
 		bw.flush();
 	}
 
-	private static void btrk(ArrayList<Integer> list, int m, int num, StringBuilder sb) {
+	private static void btrk(ArrayList<Integer> list, int m, int num, int index, StringBuilder sb) {
 
 		if(num==m) {
 			try {
@@ -45,11 +45,11 @@ public class BJ_15649 {
 			return;
 		}
 		
-		for(int i=0 ; i<list.size() ; i++) {
-			int now = list.remove(i);
+		for(int i=index ; i<list.size() ; i++) {
+			int now = list.get(i);
 			sb.append(now).append(" ");
-			btrk(list, m, num+1, sb);
-			list.add(i, now);
+			if(list.size()-i>=m-num)
+				btrk(list, m, num+1, i+1, sb);
 			sb.delete(sb.length()-2, sb.length());
 		}
 	}
