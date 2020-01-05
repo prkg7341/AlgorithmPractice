@@ -6,24 +6,23 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class BJ_3034 {
+public class BJ_11816 {
 
 	public static void main(String[] args) throws IOException {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-		String[] input = br.readLine().split(" ");
-
-		int n = Integer.parseInt(input[0]);
-		int w = Integer.parseInt(input[1]);
-		int h = Integer.parseInt(input[2]);
-		int len = w*w+h*h;
+		String input = br.readLine();
 		
-		for(int i=0 ; i<n ; i++) {
-			int l = Integer.parseInt(br.readLine());
-			if(l*l<=len) bw.write("DA\n");
-			else bw.write("NE\n");
+		if(input.substring(0, 2).contains("0x")) {
+			bw.write(String.valueOf(Integer.parseInt(input.substring(2), 16)));
+		}
+		else if(input.charAt(0)=='0') {
+			bw.write(String.valueOf(Integer.parseInt(input, 8)));		
+		}
+		else {
+			bw.write(input);
 		}
 		
 		bw.flush();
