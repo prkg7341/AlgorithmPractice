@@ -1,4 +1,4 @@
-package AlgorithmGame;
+
 
 import java.util.Scanner;
 
