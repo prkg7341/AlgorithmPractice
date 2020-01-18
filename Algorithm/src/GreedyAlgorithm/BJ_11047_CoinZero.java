@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class CoinZero {
+public class BJ_11047_CoinZero {
 
 	public static void main(String[] args) throws IOException {
 

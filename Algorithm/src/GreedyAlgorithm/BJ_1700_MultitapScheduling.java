@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class MultitapScheduling {
+public class BJ_1700_MultitapScheduling {
 
 	public static void main(String[] args) throws IOException {
 
