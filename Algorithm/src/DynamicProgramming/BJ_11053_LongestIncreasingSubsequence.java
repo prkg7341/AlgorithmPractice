@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class LongestIncreasingSubsequence {
+public class BJ_11053_LongestIncreasingSubsequence {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 

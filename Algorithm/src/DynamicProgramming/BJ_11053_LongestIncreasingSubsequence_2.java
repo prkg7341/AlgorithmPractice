@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class LongestIncreasingSubsequence_2 {
+public class BJ_11053_LongestIncreasingSubsequence_2 {
 
 	static ArrayList<Integer> list ;
 

@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 
-public class LongestBitonicSubsequence {
+public class BJ_11054_LongestBitonicSubsequence {
 
 	public static void main(String[] args) throws IOException {
 
