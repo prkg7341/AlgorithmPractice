@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Tile01 {
+public class BJ_2193_PinaryNumber {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 
@@ -17,18 +17,18 @@ public class Tile01 {
 			return;
 		}
 		if(n==2){
-			System.out.println(2);
+			System.out.println(1);
 			return;
 		}
 
-		int[] ar = new int[n+1];
+		long[] ar = new long[n];
 
+		ar[0] = 1;
 		ar[1] = 1;
-		ar[2] = 2;
 
-		for(int i=3 ; i<=n ; i++){
-			ar[i] = (ar[i-1]+ar[i-2])%15746;
+		for(int i=2 ; i<ar.length ; i++){
+			ar[i] = ar[i-2]+ar[i-1];
 		}
-		System.out.println(ar[n]);
+		System.out.println(ar[n-1]);
 	}
 }

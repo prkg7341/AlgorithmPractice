@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Stack;
 
-public class Histogram {
+public class BJ_1725_Histogram_usingStack {
 
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 

@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Coin2 {
+public class BJ_2294_Coin2 {
 
 	static int impossible = 123456;
 

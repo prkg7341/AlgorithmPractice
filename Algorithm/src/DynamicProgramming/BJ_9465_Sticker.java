@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Sticker {
+public class BJ_9465_Sticker {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 

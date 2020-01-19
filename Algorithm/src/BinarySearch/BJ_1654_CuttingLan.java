@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class CuttingLan {
+public class BJ_1654_CuttingLan {
 
 	static long max = -1;
 

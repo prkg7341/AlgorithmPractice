@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class TwoMulNTiling {
+public class BJ_1904_Tile01 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 
@@ -21,17 +21,14 @@ public class TwoMulNTiling {
 			return;
 		}
 
-		int[] ar = new int[n];
+		int[] ar = new int[n+1];
 
-		ar[0] = 1;
-		ar[1] = 2;
+		ar[1] = 1;
+		ar[2] = 2;
 
-		for(int i=2 ; i<ar.length ; i++){
-			ar[i] = ar[i-2]+ar[i-1];
-			if(ar[i]>=10007){
-				ar[i]-=10007;
-			}
+		for(int i=3 ; i<=n ; i++){
+			ar[i] = (ar[i-1]+ar[i-2])%15746;
 		}
-		System.out.println(ar[n-1]);
+		System.out.println(ar[n]);
 	}
 }

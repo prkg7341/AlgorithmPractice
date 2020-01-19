@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class PinaryNumber {
+public class BJ_1463_MakeOne {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 
@@ -12,23 +12,21 @@ public class PinaryNumber {
 
 		int n = Integer.parseInt(br.readLine());
 
-		if(n==1){
-			System.out.println(1);
-			return;
-		}
-		if(n==2){
-			System.out.println(1);
-			return;
-		}
-
-		long[] ar = new long[n];
-
-		ar[0] = 1;
-		ar[1] = 1;
+		int[] ar = new int[n+1];
 
 		for(int i=2 ; i<ar.length ; i++){
-			ar[i] = ar[i-2]+ar[i-1];
+			int min = ar[i-1]+1;
+			if(i%3==0){
+				min = Math.min(min, ar[i/3]+1);
+			}
+			if(i%2==0){
+				min = Math.min(min, ar[i/2]+1);				
+			}
+			ar[i] = min;
 		}
-		System.out.println(ar[n-1]);
+
+		int result = ar[ar.length-1];
+
+		System.out.println(result);
 	}
 }

@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class OrdinaryKnapsack {
+public class BJ_12865_OrdinaryKnapsack {
 
 	public static void main(String[] args) throws NumberFormatException, IOException{
 

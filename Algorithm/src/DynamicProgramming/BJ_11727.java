@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class MakeOne {
+public class BJ_11727 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 
@@ -12,21 +12,20 @@ public class MakeOne {
 
 		int n = Integer.parseInt(br.readLine());
 
-		int[] ar = new int[n+1];
-
-		for(int i=2 ; i<ar.length ; i++){
-			int min = ar[i-1]+1;
-			if(i%3==0){
-				min = Math.min(min, ar[i/3]+1);
-			}
-			if(i%2==0){
-				min = Math.min(min, ar[i/2]+1);				
-			}
-			ar[i] = min;
+		if(n==1){
+			System.out.println(1);
+			return;
 		}
 
-		int result = ar[ar.length-1];
+		int[][] ar = new int[n][2];
 
-		System.out.println(result);
+		ar[0][0] = 1;
+		ar[0][1] = 0;
+
+		for(int i=1 ; i<n ; i++){
+			ar[i][0] = (ar[i-1][1] + ar[i-1][0])%10007;
+			ar[i][1] = (2*ar[i-1][0])%10007;
+		}
+		System.out.println((ar[n-1][0]+ar[n-1][1])%10007);
 	}
 }

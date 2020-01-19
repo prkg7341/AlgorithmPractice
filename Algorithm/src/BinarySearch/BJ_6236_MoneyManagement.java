@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class GuitarLesson {
+public class BJ_6236_MoneyManagement {
 
 	static int min = Integer.MAX_VALUE;
 
@@ -13,25 +13,23 @@ public class GuitarLesson {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		String[] input = br.readLine().split(" ");
-		int len = Integer.parseInt(input[0]);
-		int bluelay = Integer.parseInt(input[1]);
+		int day = Integer.parseInt(input[0]);
+		int num = Integer.parseInt(input[1]);
 
-		input = br.readLine().split(" ");
-
-		int[] ar = new int[len];
+		int[] ar = new int[day];
 
 		int sum = 0;
 
-		for(int i=0 ; i<len ; i++){
-			ar[i] = Integer.parseInt(input[i]);
+		for(int i=0 ; i<day ; i++){
+			ar[i] = Integer.parseInt(br.readLine());
 			sum += ar[i];
 		}
 
-		int ave = sum/bluelay;
+		int ave = sum/num;
 
-		if(sum%bluelay!=0) ave++;
+		if(sum%num!=0) ave++;
 
-		biSearch(ave, sum, ar, bluelay);
+		biSearch(ave, sum, ar, num);
 
 		System.out.print(min);
 	}

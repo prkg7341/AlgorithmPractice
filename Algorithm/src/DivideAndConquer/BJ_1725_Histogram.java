@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Histogram {
+public class BJ_1725_Histogram {
 
 	public static void main(String[] args) throws IOException {
 

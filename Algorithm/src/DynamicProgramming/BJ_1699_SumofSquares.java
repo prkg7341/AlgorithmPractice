@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class SumofSquares_Inefficient {
+public class BJ_1699_SumofSquares {
 	public static void main(String[] args) throws IOException {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -22,8 +22,8 @@ public class SumofSquares_Inefficient {
 				continue;
 			}
 			int min = ar[i-1]+1;
-			for(int j=1 ; j<=i/2 ; j++){
-				min = Math.min(min, ar[i-j]+ar[j]);
+			for(int j=1 ; j*j<=i ; j++){
+				min = Math.min(min, ar[i-j*j]+1);
 			}
 			ar[i] = min;
 		}

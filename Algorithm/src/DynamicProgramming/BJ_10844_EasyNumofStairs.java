@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class EasyNumofStairs {
+public class BJ_10844_EasyNumofStairs {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 

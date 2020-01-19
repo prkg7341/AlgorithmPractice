@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class PlacingRouter {
+public class BJ_2110_PlacingRouter {
 
 	static long max = -1;
 
