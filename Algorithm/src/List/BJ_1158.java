@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class JosephusProblem {
+public class BJ_1158 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 
