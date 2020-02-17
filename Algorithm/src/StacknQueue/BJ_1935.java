@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Stack;
 
-public class PostfixNotation {
+public class BJ_1935 {
 
 	public static void main(String[] args) throws IOException {
 

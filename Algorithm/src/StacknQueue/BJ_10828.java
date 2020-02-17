@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class StackPractice {
+public class BJ_10828 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException{
 		ArrayList<Integer> list = new ArrayList<>();

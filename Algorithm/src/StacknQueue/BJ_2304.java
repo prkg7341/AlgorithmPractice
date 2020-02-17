@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class WarehousePolygon {
+public class BJ_2304 {
 
 	public static void main(String[] args) throws IOException {
 

@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.Stack;
 
-public class Parenthesis {
+public class BJ_9012 {
 	public static void main(String[] args) throws IOException {
 
 		Stack<Character> stack = new Stack<>();
