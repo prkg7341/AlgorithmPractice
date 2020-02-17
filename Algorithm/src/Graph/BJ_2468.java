@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class SafeArea {
+public class BJ_2468 {
 
 	static int[] rx = {-1,0,0,1};
 	static int[] ry = {0,-1,1,0};

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class GettingAreas {
+public class BJ_2583 {
 
 	static int row;
 	static int col;

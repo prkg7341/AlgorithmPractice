@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
  * 인접행렬을 사용할 때 플로이드-와샬 알고리즘을 사용했는데,
  * 다른 사람들의 코드를 보니 DFS 방식을 사용하는게 훨씬 좋다. 
  */
-public class NumofConnectedComponents_UsingFW {
+public class BJ_11724_UsingFW {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 

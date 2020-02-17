@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class TermProject {
+public class BJ_9466 {
 
 	static int count;
 	static int[] want;

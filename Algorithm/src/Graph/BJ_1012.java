@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class OrganicCabbage {
+public class BJ_1012 {
 
 	static boolean[][] is;
 	static boolean[][] checked;

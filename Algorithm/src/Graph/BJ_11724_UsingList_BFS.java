@@ -9,7 +9,7 @@ import java.util.Queue;
 /*
  * 더 향상시킬 방법을 찾아봤지만, 잘 모르겠고 시간도 많이 들어 일단 스킵
  */
-public class NumofConnectedComponents_UsingList_BFS {
+public class BJ_11724_UsingList_BFS {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 
