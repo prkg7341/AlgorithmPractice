@@ -1,6 +1,6 @@
 package List;
 
-public class LinkedList {
+public class LinkedList_ {
 	// 첫번째 노드를 가리키는 필드
 	private Node head;
 	private Node tail;
@@ -20,7 +20,7 @@ public class LinkedList {
 		}
 	}
 	public static void main(String[] args){
-		LinkedList list = new LinkedList();
+		LinkedList_ list = new LinkedList_();
 		ListIterator it = list.listIterator();
 		int k=0;
 		list.addFirst(1);
@@ -205,7 +205,7 @@ public class LinkedList {
 			if(nextIndex == 0){
 				throw new IllegalStateException();
 			}
-			LinkedList.this.remove(nextIndex-1);
+			LinkedList_.this.remove(nextIndex-1);
 			nextIndex--;
 		}
 	}
