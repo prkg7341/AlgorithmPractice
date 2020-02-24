@@ -25,6 +25,7 @@ Algorithm/src/Main.java
 Algorithm/src/Main.java
 Algorithm/src/Main.java
 Algorithm/src/Main.java
+<<<<<<< HEAD
 .metadata/.lock
 .metadata/.plugins/org.eclipse.core.resources/.root/.indexes/history.version
 .metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index
@@ -57,3 +58,6 @@ Algorithm/src/Main.java
 .metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml
 .metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml
 .metadata/version.ini
+=======
+Algorithm/src/Main.java
+>>>>>>> c4282dbbfe237503a59b0946d18a1defa69710f7
