@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class c560 {
+public class CF_560_c {
 
 	static int count = 0;
 

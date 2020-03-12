@@ -4,35 +4,37 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class b570 {
-
-	public static void main(String[] args) throws NumberFormatException, IOException {
-
+public class CF_565_b {
+	public static void main(String[] args) throws IOException {	
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
-
 		int t = Integer.parseInt(br.readLine());
 
 		for(int tt=1 ; tt<=t ; tt++){
+			int n = Integer.parseInt(br.readLine());
+			int[] ar = new int[3];
 			String[] input = br.readLine().split(" ");
-			int n = Integer.parseInt(input[0]);
-			int k = Integer.parseInt(input[1]);
-
-			input = br.readLine().split(" ");
-			int min = 123456789;
-			int max = 0;
 			for(int i=0 ; i<n ; i++){
 				int now = Integer.parseInt(input[i]);
-
-				min = Math.min(min, now);
-				max = Math.max(max, now);
+				if(now%3==0){
+					ar[0]++;
+				}
+				else if(now%3==1){
+					ar[1]++;
+				}
+				else{
+					ar[2]++;
+				}
 			}
-			if(max-min>2*k){
-				sb.append(-1).append("\n");
-			}
-			else{
-				sb.append(min+k).append("\n");
-			}
+			int result = 0;
+			result += ar[0];
+			int min = Math.min(ar[1], ar[2]);
+			result += min;
+			ar[1] -= min;
+			ar[2] -= min;
+			result += ar[1]/3;
+			result += ar[2]/3;
+			sb.append(result).append("\n");
 		}
 		sb.deleteCharAt(sb.length()-1);
 		System.out.print(sb.toString());

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
-public class f570 {
+public class CF_570_f {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 

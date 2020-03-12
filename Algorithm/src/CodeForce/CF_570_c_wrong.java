@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class c570_wrong {
+public class CF_570_c_wrong {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 

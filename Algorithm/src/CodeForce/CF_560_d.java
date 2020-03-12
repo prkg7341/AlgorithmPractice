@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class d560 {
+public class CF_560_d {
 
 	public static void main(String[] args) throws IOException {
 

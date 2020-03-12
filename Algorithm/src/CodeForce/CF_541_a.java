@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class a541 {
+public class CF_541_a {
 	static int h0;
 	static int w0;
 
