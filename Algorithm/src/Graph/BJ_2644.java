@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class CalculatingChon {
+public class BJ_2644 {
 
 	public static void main(String[] args) throws IOException {
 

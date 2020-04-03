@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Escape_ {	
+public class BJ_16397 {	
 
 	static int MAX;
 	static int dest;

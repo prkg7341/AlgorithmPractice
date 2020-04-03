@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class DFSBFS {
+public class BJ_1260 {
 
 	// 문자열 출력에 필요한 정적
 	static StringBuilder sb;

@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class MovementofKnight {
+public class BJ_7562 {
 
 	public static void main(String[] args) throws IOException {
 

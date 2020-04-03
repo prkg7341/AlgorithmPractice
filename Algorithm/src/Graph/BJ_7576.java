@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Tomato {
+public class BJ_7576 {
 
 	static Queue<Position> queue = new LinkedList<>();
 	static boolean[][] checked;

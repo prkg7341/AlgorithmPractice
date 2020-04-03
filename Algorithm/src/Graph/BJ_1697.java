@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class HideNSeek {
+public class BJ_1697 {
 
 	static int start;
 	static int end;

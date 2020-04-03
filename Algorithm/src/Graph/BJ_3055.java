@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Escape {
+public class BJ_3055 {
 
 	public static void main(String[] args) throws IOException {
 

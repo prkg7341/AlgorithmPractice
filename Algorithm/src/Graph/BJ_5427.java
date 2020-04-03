@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Fire {
+public class BJ_5427 {
 
 	static int[] dx = {-1,0,0,1};
 	static int[] dy = {0,-1,1,0};

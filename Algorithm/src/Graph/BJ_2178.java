@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class MazeSearching {
+public class BJ_2178 {
 
 	static Map[][] ar;
 	static int n,m;
