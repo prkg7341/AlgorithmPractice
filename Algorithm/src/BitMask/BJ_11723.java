@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Set {
+public class BJ_11723 {
 
 	public static void main(String[] args) throws IOException {	
 
