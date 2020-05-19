@@ -6,7 +6,7 @@ public class Solution {
 
 	public static void main(String[] args) throws IOException {
 
-		P1 s = new P1();
+		P1_예시만통과 s = new P1_예시만통과();
 		System.out.println(s.solution(3, 3, new String[] {"DBA", "C*A", "CDB"}));
 		// ABCD
 		System.out.println(s.solution(2, 4, new String[] {"NRYN", "ARYA"}));
@@ -18,6 +18,6 @@ public class Solution {
 		
 //		P2 s = new P2();
 //		System.out.println(s.solution(new int[] {120, 110, 140, 150}, 485));
-		// 127
+//		// 127
 	}
 }

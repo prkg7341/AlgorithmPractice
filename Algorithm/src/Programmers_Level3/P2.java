@@ -1,36 +1,8 @@
 package Programmers_Level3;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-
 public class P2 {
 
-	public static void main(String[] args) throws IOException {
-
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-
-		int n = Integer.parseInt(br.readLine());
-		String[] input = br.readLine().split(" ");
-
-		int[] ar = new int[n];
-
-		for(int i=0 ; i<n ; i++) {
-			ar[i] = Integer.parseInt(input[i]);
-		}
-
-		int M = Integer.parseInt(br.readLine());
-
-		bw.write(String.valueOf(solution(ar, M)));
-
-		bw.flush();
-	}
-
-
-	public static int solution(int[] budgets, int M) {
+	public int solution(int[] budgets, int M) {
 		long sum = 0;
 		int max = 0;
 
@@ -45,7 +17,7 @@ public class P2 {
 		}
 	}
 
-	private static int bs(int min, int max, int[] budgets, int M) {
+	private int bs(int min, int max, int[] budgets, int M) {
 		int mid = (min+max)/2;
 
 		if(min>max){
@@ -59,7 +31,7 @@ public class P2 {
 		}
 	}
 
-	private static boolean check(int mid, int[] budgets, int M) {
+	private boolean check(int mid, int[] budgets, int M) {
 
 		long sum = 0;
 
