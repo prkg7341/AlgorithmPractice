@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class NetworkConnection {
+public class BJ_1922 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 
