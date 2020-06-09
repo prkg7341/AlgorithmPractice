@@ -1,35 +1,37 @@
 package Heap;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.PriorityQueue;
 
-public class MinHeap {
+public class BJ_1715 {
 
 	public static void main(String[] args) throws IOException {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringBuilder sb = new StringBuilder();
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
 		int n = Integer.parseInt(br.readLine());
 
 		PriorityQueue<Integer> pq = new PriorityQueue<>();
 
 		for(int i=0 ; i<n ; i++) {
-			int now = Integer.parseInt(br.readLine());
-			if(now==0) {
-				if(pq.size()==0) {
-					sb.append("0\n");
-				}
-				else {
-					sb.append(pq.poll()).append("\n");
-				}
-			}
-			else {
-				pq.add(now);
-			}
+			pq.add(Integer.parseInt(br.readLine()));
 		}
-		System.out.print(sb.toString());
+
+		int sum = 0;
+
+		while(pq.size()>1) {
+			int now = pq.poll()+pq.poll();
+			sum += now;
+			pq.add(now);
+		}
+
+		bw.write(String.valueOf(sum));
+
+		bw.flush();
 	}
 }

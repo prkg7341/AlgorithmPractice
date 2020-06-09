@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
-public class NthNum {
+public class BJ_2075 {
 
 	public static void main(String[] args) throws IOException {
 
