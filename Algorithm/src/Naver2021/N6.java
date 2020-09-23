@@ -60,7 +60,7 @@ public class N6 {
 		Com(String name, StringBuilder sb, int num){
 			this.name = name;
 			this.sb = sb;
-			this.name = num;
+			this.num = num;
 		}
 	}
 }
