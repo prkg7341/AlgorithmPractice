@@ -12,26 +12,7 @@ public class DecompositionSum {
 
 		int n = Integer.parseInt(br.readLine());
 
-		if(n<10){
-			if(n%2==0){
-				System.out.print(n/2);
-			}
-			else {
-				System.out.print(0);
-			}
-			return;
-		}
-
-		int nn = n;
-
-		int temp = -1;
-
-		while(nn!=0){
-			nn /= 10;
-			temp++;
-		}
-
-		for(int i=n-9*temp ; i<n ; i++){
+		for(int i=n/2 ; i<n ; i++){
 
 			int ii=i;
 
