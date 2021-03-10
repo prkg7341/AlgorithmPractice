@@ -18,15 +18,25 @@ public class BJ_1074_Z {
 			return;
 		}
 		else{
-			if(n!=1){
-				rec(n/2, row, col, r, c);
-				rec(n/2, row, col+n/2, r, c);
-				rec(n/2, row+n/2, col, r, c);
-				rec(n/2, row+n/2, col+n/2, r, c);
+			if(row+n/2>r){
+				if(col+n/2>c){
+					rec(n/2, row, col, r, c);
+				}
+				else{
+					count += n*n/4;
+					rec(n/2, row, col+n/2, r, c);
+				}
 			}
 			else{
-				count++;
-			}
+				if(col+n/2>c){
+					count += n*n/2;
+					rec(n/2, row+n/2, col, r, c);
+				}
+				else{
+					count += n*n/4*3;
+					rec(n/2, row+n/2, col+n/2, r, c);
+				}
+			}	
 		}
 	}
 
