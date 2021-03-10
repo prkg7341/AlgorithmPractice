@@ -25,7 +25,10 @@ public class BJ_1931_MeetingRoomAssignment {
 		Arrays.sort(ar, new Comparator<int[]>() {
 			@Override
 			public int compare(int[] o1, int[] o2) {
-				return o1[0] - o2[0];
+				if(o1[1]==o2[1]){
+					return o1[0] - o2[0];
+				}
+				else return o1[1] - o2[1];
 			}
 		});
 
@@ -35,14 +38,11 @@ public class BJ_1931_MeetingRoomAssignment {
 		for(int i=0 ; i<n ; i++){
 			int start = ar[i][0];
 			int end = ar[i][1];
+				
+			
 			if(start>=max){
 				max = end;
 				count++;
-			}
-			else{
-				if(end<max){
-					max = end;
-				}
 			}
 		}
 		System.out.print(count);
