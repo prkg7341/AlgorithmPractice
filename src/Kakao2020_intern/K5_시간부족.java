@@ -3,7 +3,7 @@ package Kakao2020_intern;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class K5_½Ã°£ºÎÁ· {
+public class K5_ì‹œê°„ë¶€ì¡± {
 	public boolean solution(int n, int[][] path, int[][] order) {
         boolean answer = true;
         

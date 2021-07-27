@@ -1,10 +1,12 @@
+package Graph;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Main{
+public class BJ_4179{
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -42,9 +44,9 @@ public class Main{
 		int count = 0;
 
 		while(true) {
-			
+
 			count++;
-			
+
 			int len = fire.size();
 
 			for(int i=0 ; i<len ; i++) {
@@ -62,7 +64,7 @@ public class Main{
 			}
 
 			len = jh.size();
-			
+
 			if(len==0) {
 				System.out.println("IMPOSSIBLE");
 				return;

@@ -6,7 +6,7 @@ public class Solution {
 
 	public static void main(String[] args) throws IOException {
 
-		P1_¿¹½Ã¸¸Åë°ú s = new P1_¿¹½Ã¸¸Åë°ú();
+		P1_ì˜ˆì‹œë§Œí†µê³¼ s = new P1_ì˜ˆì‹œë§Œí†µê³¼();
 		System.out.println(s.solution(3, 3, new String[] {"DBA", "C*A", "CDB"}));
 		// ABCD
 		System.out.println(s.solution(2, 4, new String[] {"NRYN", "ARYA"}));

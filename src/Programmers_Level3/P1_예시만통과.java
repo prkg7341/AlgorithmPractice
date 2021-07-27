@@ -1,6 +1,6 @@
 package Programmers_Level3;
 
-public class P1_¿¹½Ã¸¸Åë°ú {
+public class P1_ì˜ˆì‹œë§Œí†µê³¼ {
 
 	static StringBuilder sb;
 	static boolean[][] abs;
@@ -40,32 +40,32 @@ public class P1_¿¹½Ã¸¸Åë°ú {
 		if(check(0))
 			return sb.toString();
 		else
-			// TODO Áö¿ï°Í
+			// TODO ï¿½ï¿½ï¿½ï¿½ï¿½
 			return "IMPOSSIBLE";
 	}
 
 	private boolean check(int index) {
 		
-//		System.out.println((char)('A'+index)+"¿¡ ´ëÇØ Á¶»ç");
+//		System.out.println((char)('A'+index)+"ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 
 		if(index==alphabet.length) {
 			if(bit==0) return true;
 			else return false;
 		}
 
-		// ÇØ´ç ¾ËÆÄºªÀÌ ÀÖÀ¸¸é
+		// ï¿½Ø´ï¿½ ï¿½ï¿½ï¿½Äºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		if(alphabet[index][0] + alphabet[index][1] != 0){
-			// Áö±Ý ´çÀå ¾ÈµÇ¸é
+			// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ÈµÇ¸ï¿½
 			if(!sum(index)){
 				return check(index+1);
 			}
-			// µÇ¸é AºÎÅÍ ´Ù½Ã
+			// ï¿½Ç¸ï¿½ Aï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½
 			else{
 //				System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
 				return check(0);
 			}			
 		}
-		// ¾øÀ¸¸é ´ÙÀ½ ¾ËÆÄºªÀ¸·Î ³Ñ¾î°¨
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Äºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ¾î°¨
 		else{
 			return check(index+1);
 		}
@@ -84,29 +84,29 @@ public class P1_¿¹½Ã¸¸Åë°ú {
 		c2 = alphabet[index][1]%1000-1;
 
 		if(r1<r2){
-//			System.out.print("¹Ø");
+//			System.out.print("ï¿½ï¿½");
 			for(int i=r1+1 ; ret1 && i<r2 ; i++){
 				ret1 = !abs[i][c1];
 			}
 //			System.out.print(ret1);
 			if(c1<c2){
-//				System.out.println("¿À");
+//				System.out.println("ï¿½ï¿½");
 				for(int i=c1 ; ret1 && i<c2 ; i++){
 					ret1 = !abs[r2][i];
 				}
 			}
 			else if(c1>c2){
-//				System.out.println("¿Þ");
+//				System.out.println("ï¿½ï¿½");
 				for(int i=c1 ; ret1 && i>c2 ; i--){
 					ret1 = !abs[r2][i];
 				}
 			}
 			else{
-//				System.out.println("c°¡ °°¾Æ¼­ ¿òÁ÷ÀÏ ÇÊ¿ä ¾øÀ½");
+//				System.out.println("cï¿½ï¿½ ï¿½ï¿½ï¿½Æ¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¿ï¿½ ï¿½ï¿½ï¿½ï¿½");
 			}
 		}
 		else{
-//			System.out.println("rÀÌ °°À½");
+//			System.out.println("rï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 			ret1 = false;
 		}
 
@@ -114,36 +114,36 @@ public class P1_¿¹½Ã¸¸Åë°ú {
 			for(int i=c1+1 ; ret2 && i<c2 ; i++){
 				ret2 = !abs[r2][i];
 			}
-//			System.out.print("¿À");
+//			System.out.print("ï¿½ï¿½");
 //			System.out.print(ret2);
 			if(r1<r2){
-//				System.out.println("¹Ø");
+//				System.out.println("ï¿½ï¿½");
 				for(int i=r1 ; ret2 && i<r2 ; i++){
 					ret2 = !abs[i][c2];
 				}
 			}
 			else{
-//				System.out.println("rÀÌ °°¾Æ¼­ ¿òÁ÷ÀÏ ÇÊ¿ä ¾øÀ½");				
+//				System.out.println("rï¿½ï¿½ ï¿½ï¿½ï¿½Æ¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¿ï¿½ ï¿½ï¿½ï¿½ï¿½");				
 			}
 		}
 		else if(c1>c2){
 			for(int i=c1-1 ; ret2 && i>c2 ; i--){
 				ret2 = !abs[r2][i];
 			}
-//			System.out.print("¿Þ"); 
+//			System.out.print("ï¿½ï¿½"); 
 //			System.out.print(ret2);
 			if(r1<r2){
-//				System.out.println("¹Ø");
+//				System.out.println("ï¿½ï¿½");
 				for(int i=r1 ; ret2 && i<r2 ; i++){
 					ret2 = !abs[i][c2];
 				}
 			}
 			else{
-//				System.out.println("rÀÌ °°¾Æ¼­ ¿òÁ÷ÀÏ ÇÊ¿ä ¾øÀ½");				
+//				System.out.println("rï¿½ï¿½ ï¿½ï¿½ï¿½Æ¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¿ï¿½ ï¿½ï¿½ï¿½ï¿½");				
 			}
 		}
 		else{
-//			System.out.println("c°¡ °°À½");
+//			System.out.println("cï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 			ret2 = false;
 		}
 
@@ -151,7 +151,7 @@ public class P1_¿¹½Ã¸¸Åë°ú {
 
 //		System.out.print((char)('A'+index));
 		if(ret1) {
-//			System.out.println("Åë°ú");
+//			System.out.println("ï¿½ï¿½ï¿½");
 			abs[r1][c1] = false;
 			abs[r2][c2] = false;
 			alphabet[index] = new int[] {0,0};
@@ -159,7 +159,7 @@ public class P1_¿¹½Ã¸¸Åë°ú {
 			bit &= ~(1<<(index));
 		}
 		else{
-//			System.out.println("Åë°ú¸øÇÔ");
+//			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 		}
 
 		return ret1;
