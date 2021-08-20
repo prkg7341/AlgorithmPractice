@@ -1,4 +1,4 @@
-package Graph;
+package GreedyAlgorithm;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class BJ_3109 {
+public class BJ_3109_개선전 {
 
 	static int row, col;
 
