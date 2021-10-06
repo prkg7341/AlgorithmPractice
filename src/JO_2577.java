@@ -23,10 +23,10 @@ public class JO_2577 {
 		for (int i = 0; i < n; i++) {
 			int now = Integer.parseInt(br.readLine());
 			ar[i] = now;
-			if (count[now] == 0)
-				inc++;
+
 			if (i < k) {
-				count[now]++;
+				if (count[now]++ == 0)
+					inc++;
 			}
 		}
 		int max = 0;
@@ -52,8 +52,9 @@ public class JO_2577 {
 				inc++;
 
 			if (count[c] == 0)
-				inc++;
-			max = Math.max(max, inc);
+				max = Math.max(max, inc + 1);
+			else
+				max = Math.max(max, inc);
 		}
 
 		System.out.print(max);
